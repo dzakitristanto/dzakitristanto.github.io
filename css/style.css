@@ -1,0 +1,713 @@
+
+
+/* import font form fonts.css */
+
+@import url(./fonts.css);
+
+/* css variable */
+@import url(/css/partials/_variable.css);
+
+/* import global css */
+@import url(./partials/_global.css);
+
+
+html, body{
+    font-family: var(--roboto);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.profil-area, 
+.work-experience, 
+.portfolio-area, 
+.contact-area{
+    padding-top: 5rem;
+}
+
+/* scroll up */
+.scroll-up-btn{
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background: var(--primary-color);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+/* Navbar Area */
+
+
+.navbar-brand{
+    color: var(--primary-color) !important;
+    font-family:  var(--knewave);
+    font-size: 30px;
+    font-weight: bold;
+}
+.navbar-brand span{
+    font-size: 20px;
+    color: var(--primary-color2) !important;
+}
+
+
+.navbar-nav a{
+    /* color: var(--text-color) !important; */
+    margin-right: 20px;
+    font-weight: 500;
+    
+}
+
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link{
+    color: var(--primary-color);
+}
+/* .navbar-nav .active a{
+    color: var(--primary-color) !important;
+} */
+
+.navbar-nav a:hover{
+    /* color: var(--primary-color) !important; */
+}
+
+
+
+
+/* banner Area */
+
+.jumbotron{
+    padding-top: 15%;
+    background-position: center left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/img/banner.jpg);
+    height: 100vh;
+    
+}
+.jumbotron-fluid h6{
+    margin-top: 7rem;
+    font-weight: 300;
+    font-size: 25px;
+    display: inline-block; 
+}
+
+.garis{
+    display: inline-block;
+    /* background-color: red; */
+    border-bottom: 1px solid black;
+    width: 50px;
+    /* height: 20px; */
+}
+
+.banner-area h1{
+    font-size: 40px;
+}
+
+.jumbotron-fluid h1 span{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.jumbotron-fluid p{
+    font-weight:350;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.jumbotron-fluid .sub1{
+    margin-top: 15px;
+}
+
+.jumbotron-fluid .sub2{
+   margin-top: -15px;
+   margin-bottom: 30px;
+}
+
+.banner-area button{
+    margin-right: 10px;
+}
+
+
+
+/* Profil Area */
+
+.profil-area{
+    background-image: url(/img/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding-top: 5rem; */
+    /* margin-top: -50px; */
+    /* background-color: var(--background-color); */
+}
+
+.profil-area .tittle{
+    margin-top: 3rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.profil-area .pertama{
+    padding-top: 4rem;
+    /* background-color: red; */
+}
+
+.profil-area .foto img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profil-area .profil-text{
+    margin-bottom: 3rem;
+} 
+
+.profil-area p{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 40ch;
+}
+
+
+
+.profil-area hr{
+    width: 17rem;
+    margin-top: -3px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0.75),rgba(0,0,0,0));
+}
+
+
+
+/* Work Experience Area */
+.work-experience{
+ padding-top: 8rem;
+ margin-bottom: 5rem;
+}
+
+.work-experience .title-text{
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+.work-experience hr{
+    width: 17rem;
+    margin-top: -3px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0.75),rgba(0,0,0,0));
+    
+}
+
+ .work-experience .fast-row .col-lg-4{
+    display: flex;
+     justify-content: center;
+ }
+
+ .fast-row .col-lg-4 > .single-brand{
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    text-align: center;
+    padding: .8rem 0rem;
+    margin-bottom: 2rem;
+    width: 180px;
+    height: 170px;
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+.fast-row .col-lg-4 > .single-brand>p{
+    font: normal italic 12px/5px var(--roboto);
+    color: rgb(156, 156, 156);
+    padding-top: 4px;
+    margin-top: 20px;
+   
+}
+
+
+.fast-row .col-lg-4 > .single-brand>img{
+    width: 50%;
+}
+    
+.fast-row .col-lg-4 > .single-brand:hover{
+    box-shadow: var(--box-shadow);
+    transform: scale(1.1);
+    
+}
+
+.work-experience .pengalaman-area{
+    background-color: var(--background-color);
+    margin-left: auto;
+    margin-right: auto;
+    height: 105%;
+    width: 90%;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+}
+
+.work-experience .pengalaman-area span{
+    display: block;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+.work-experience .pengalaman-area .tahun-area .tahun{
+    color: var(--primary-color);
+    margin-top: 12px;
+    font-size: 80px;
+    border: 3px dashed var(--primary-color);
+    border-width: 2px;
+}
+
+.work-experience .pengalaman-area .tahun-area{
+    padding-top: 20px;
+}
+
+.work-experience .pengalaman-area .call-area{
+    
+    margin-top: 18%;
+    
+    
+}
+
+.work-experience .pengalaman-area .call-now{
+    padding-top: 10px;     
+}
+
+
+
+/* portfolio Area */
+
+.portfolio-area{
+    background-color: var(--background-color);
+}
+
+.portfolio-area hr{
+    width: 17rem;
+    margin-top: -3px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0.75),rgba(0,0,0,0));
+}
+
+.portfolio-area .button-group button{
+    
+    background: transparent;
+    border: none;
+    font: normal 500 15px/50px var(--roboto);
+    text-transform: uppercase;
+    
+}
+
+.portfolio-area .button-group button + button{
+    margin-left: 5px;
+    border-radius: 10px;
+}
+
+.lightbox-gallery span {
+    size: 12px;
+    font-style: italic;
+}
+
+.lightbox-gallery h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 40px;
+    color:var(--primary-color);
+}
+
+@media (max-width:767px) {
+    .lightbox-gallery h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px
+    }
+}
+
+.lightbox-gallery .intro {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-family: var(--roboto);
+}
+
+.lightbox-gallery .intro p {
+    margin-bottom: 0
+}
+
+.lightbox-gallery .photos {
+    padding-bottom: 20px
+}
+
+.lightbox-gallery .item {
+    padding-bottom: 30px
+}
+
+.portfolio-area img{
+    width: 80%;
+    border-radius: 10px;
+    filter: brightness(90%);
+    transform: scale(1);
+    /* -webkit-transform: scale(1); */
+    transition: .3s ease-in-out;
+    
+}
+
+.portfolio-area img:hover{
+    box-shadow: var(--box-shadow);
+    filter: brightness(100%);
+    transform: scale(1.05);
+}
+
+
+/* Contact Area */
+
+.contact-area h2{
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+.contact-area hr{
+    margin-top: -3px;
+    width: 97%;
+    height: 1px;
+    color: rgb(156, 156, 156);
+}
+.contact-area .container{
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    background-color:var(--background-color);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.contact-area p{
+    font-weight: 300;
+}
+
+.contact-area .medsos{
+    /* background-color: red; */
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+
+.contact-area .medsos a i{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 10px 10px;
+    margin-right: 2px;
+
+}
+
+.contact-area .medsos a :hover{
+    color: white;
+    text-decoration: 1px solid;
+    background-color: var(--primary-color);
+}
+
+.contact-area h6{
+    /* text-align: center; */
+    color: white;
+    border-top-left-radius: 20px;
+    padding: 5px 20px;
+    background-image: linear-gradient(90deg, var(--primary-color), var(--background-color));
+}
+a:link {
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: none;
+}
+  
+a:active {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* footer */
+ footer{
+    margin-top: 50px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+footer h6{
+    font-weight: 300;
+}
+
+
+
+
+
+/* dekstop Version */
+
+@media (max-width:992px){
+
+    .navbar{
+        background-color: rgb(107, 162, 235);
+    }
+    .navbar .navbar-brand, .navbar-brand span{
+        color: white !important;
+    }
+
+    .navbar-nav a{
+        color: white !important;
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav a:hover{
+        
+        color: var(--text-color) !important;
+
+    }
+
+    .navbar button{
+        background-color: white ;
+    }
+
+    
+
+   
+
+    .MobileMenu{
+        position: fixed;
+        width: 70%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: rgb(107, 162, 235) ;
+        left: 0;
+        margin-top: 4rem;
+        transform: translateX(-100%);
+        transition:  all ease 0.25s;
+    }
+
+    .MobileMenu.open{
+        transform: translateX(0);
+    }
+
+    .overlay{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+    }
+
+    .overlay.open{
+        display: block;
+    }
+
+     
+}
+
+@media (min-width: 992px){
+
+    .navbar{
+        background-color: transparent !important;
+    }
+ 
+    .bgcolor.scrolled{
+        background-color:white!important;
+        box-shadow: var(--box-shadow);
+        transition: ease-in-out 0.3s;
+    }
+
+    .navbar-nav a{
+        text-transform: uppercase;
+
+    }
+
+    .jumbotron{
+        /* margin-top: -75px; */
+        background-attachment: fixed;
+    
+       
+    }
+
+    .jumbotron-fluid h6{
+        margin-top: 1rem;
+        
+    }
+
+    /* .nav-link:hover::after{
+        content: '';
+        display: block;
+        border-bottom: 3px solid var(--primary-color);
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+        
+    } */
+  
+    /* Profil */
+    
+    .profil-area{
+        margin-top: -33px;
+        height: 100vh;
+        background-attachment: fixed;
+    }
+
+    .profil-area .foto{
+        /* border-right-style: solid; */
+   
+        /* background-color: red; */
+    }
+    .profil-area .foto img{
+        /* width: 60%; */
+        margin-left: 12%;
+        /* background-color: rebeccapurple; */
+    }
+    
+    .profil-area .profil-text{
+        margin-left: 0;
+    }
+
+    .profil-area p{
+        max-width: 70ch;
+    }
+
+    /* Pengalaman */
+
+
+    .work-experience .pengalaman-area{
+        height: 92%;
+        
+    
+    }
+
+    .work-experience .pengalaman-area .tahun-area .tahun{
+        color: var(--primary-color);
+        margin-top: 12px;
+        font-size: 80px;
+        border: 3px dashed var(--primary-color);
+        border-width: 2px;
+    }
+
+    .work-experience .pengalaman-area .tahun-area span{
+        font-size: 30px;
+        text-transform:capitalize;
+    }
+
+    
+
+    /* portfolio */
+    .portfolio-area img{
+        width: 100%;
+        
+    }
+    
+    
+
+    /* contact Area */
+    .contact-area .medsos{
+        /* background-color: red; */
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    
+
+    
+}
+
+@media (max-width: 500px) {
+
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
+
+@media (min-width: 600px){
+
+    
+    .profil-area .foto img{
+        max-width: 22rem;
+        
+    }
+
+    .profil-area .profil-text{
+        margin-left: 0;
+        margin-bottom: 3rem;
+    }
+
+    .profil-area .pertama{
+        padding-top: 10%;
+    }
+
+    /* experience */
+
+    .work-experience .pengalaman-area{
+        
+        height: 95%;
+        
+    }
+
+    .work-experience .pengalaman-area .tahun-area .tahun{
+        font-size: 50px;
+
+    }
+
+    .work-experience .tahun-area h2{
+        text-transform: capitalize;
+        font-size: 20px;
+        
+    }
+
+    .contact-area .medsos{
+        /* background-color: red; */
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}

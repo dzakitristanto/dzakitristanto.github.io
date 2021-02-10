@@ -1,0 +1,13 @@
+
+/* @font-face */
+
+@font-face{
+    font-family: "Roboto";
+    src: '../font/Roboto/Roboto-Regular.ttf';
+}
+
+@font-face{
+    font-family: "Knewave";
+    src: '../font/Knewave/Knewave-Regular.ttf';
+}
+
