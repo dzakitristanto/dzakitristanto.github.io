@@ -5,10 +5,10 @@
 /* @import url(./fonts.css); */
 
 /* css variable */
-@import url(/css/partials/_variable.css);
+/* @import url(/css/partials/_variable.css); */
 
 /* import global css */
-@import url(./partials/_global.css);
+/* @import url(./partials/_global.css); */
 
 
 html, body{
