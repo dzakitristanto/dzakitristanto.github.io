@@ -304,7 +304,7 @@ html{
 /* portfolio Area */
 
 .portfolio-area{
-    background-color: #9a9b9c;
+    background-color: var(--background-color);
 }
 
 .portfolio-area hr{
