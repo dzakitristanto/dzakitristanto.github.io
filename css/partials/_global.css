@@ -1,12 +1,12 @@
 
 
-.title-text{
+/* .title-text{
     font: normal bold var(--roboto);
-}
+} */
 
 /* button */
 
-.button{
+/* .button{
     padding: .6rem 2rem;
     font:normal 400 15px/20px var(--roboto);
     position: relative;
@@ -76,4 +76,4 @@ button:hover
 
 .button-group button:hover{
     color: var(--primary-color);
-}
+} */
