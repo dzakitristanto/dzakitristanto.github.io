@@ -90,3 +90,58 @@ $(document).on('click', '.nav-item', function(){
     $(this).addClass('active').siblings().removeClass('active');
 });
 // end active clik navbar
+
+
+
+// paralax
+
+$(window).scroll(function(){
+
+    var wScroll = $(this).scrollTop();
+
+    // $('.jumbotronparalax').css({
+    //     'transform' : 'translate(0px, '+ wScroll/4+'%)'
+    // });
+
+    // $('.jumbotronparalax .button').css({
+    //     'transform' : 'translate(0px, '+ wScroll/6+'%)'
+    // });
+
+    // About
+    if(wScroll > $('.profil-area').offset().top -220 ) {
+        $('.pertama').addClass('pMuncul');
+        $('.kedua').addClass('pMuncul');
+        $('img').addClass('imgmuncul');
+    
+    }
+});
+
+// paralax work
+$(window).scroll(function(){
+    var wrScroll = $(this).scrollTop();
+
+    // workexperience
+
+    // if(wrScroll > $('.work-experience').offset().top- 400){
+    //     $('.work-experience .single-brand').addClass('workMuncul');
+    // }
+    
+    // else (wScroll > $('.work-experience').offset().top- 300){
+    //     $('.work-experience .pengalaman-area').addClass('pengalamanMuncul');
+    // }
+
+
+});
+
+
+// paralax about
+
+$(window).on('load', function(){
+    // $('.pertama').addClass('pMuncul');
+    // $('.kedua').addClass('pMuncul');
+
+    $('.jumbotronparalax').addClass('jumbomuncul');
+   
+    
+
+});

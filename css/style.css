@@ -137,8 +137,20 @@ html{
     background-repeat: no-repeat;
     background-image: url(/img/banner.jpg);
     height: 100vh;
-    
+    /* overflow: hidden; */
 }
+
+.jumbotronparalax{
+    opacity: 0;
+    transform: translate(0,100px);
+    transition: 2s;
+}
+
+.jumbotronparalax.jumbomuncul{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
 .jumbotron-fluid h6{
     margin-top: 7rem;
     font-weight: 300;
@@ -183,8 +195,6 @@ html{
     margin-right: 10px;
 }
 
-
-
 /* Profil Area */
 
 .profil-area{
@@ -205,13 +215,35 @@ html{
 
 .profil-area .pertama{
     padding-top: 4rem;
+    opacity: 0;
+    transform: translate(-100px, 0);
+    transition: 2s;
     /* background-color: red; */
+}
+
+.profil-area .kedua{
+    opacity: 0;
+    transform: translate(100px, 0);
+    transition: 2s;
+}
+
+.pertama.pMuncul, .kedua.pMuncul{
+    opacity: 1;
+    transform: translate(0,0);
 }
 
 .profil-area .foto img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0;
+    transform: translate(0,-100px);
+    transition: 2s;
+}
+
+.profil-area img.imgmuncul{
+    opacity: 1;
+    transform: translate(0,0);
 }
 
 .profil-area .profil-text{
@@ -257,12 +289,34 @@ html{
     
 }
 
- .work-experience .fast-row .col-lg-4{
+.work-experience .fast-row .col-lg-4{
     display: flex;
      justify-content: center;
- }
+}
 
- .fast-row .col-lg-4 > .single-brand{
+/* .single-brand{
+    opacity: 0;
+    transform: translate(0,100px);
+    transition: 2s;
+}
+
+.single-brand.workMuncul{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.work-experience .pengalaman-area{
+    opacity: 0;
+    transform: translate(100px,0);
+    transition: 2s;
+}
+
+.work-experience .pengalaman-area.pengalamanMuncul{
+    opacity: 1;
+    transform: translate(0,0);
+} */
+
+.fast-row .col-lg-4 > .single-brand{
     border: 1px solid var(--border-color);
     border-radius: 1rem;
     text-align: center;
@@ -539,11 +593,7 @@ footer h6{
     .navbar button{
         background-color: white ;
     }
-
-    
-
-   
-
+  
     .MobileMenu{
         position: fixed;
         width: 70%;
@@ -576,6 +626,14 @@ footer h6{
         display: block;
     }
 
+    .profil-area img{
+        width: 70%;
+        height: auto;
+    }
+
+    .profil-area p {
+        max-width: 35ch;
+    }
      
 }
 
