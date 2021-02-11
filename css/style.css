@@ -40,8 +40,8 @@ html, body{
 
 
     /* fontfamily variable */
-    --roboto:'Roboto',cursive;
-    --knewave:'Knewave', cursive;
+    --roboto:'Roboto',Roboto, veranda;
+    --knewave:'Knewave', Roboto, veranda;
 }
 
 html, body{
