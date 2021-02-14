@@ -96,25 +96,33 @@ $(document).on('click', '.nav-item', function(){
 // paralax
 
 $(window).scroll(function(){
-
     var wScroll = $(this).scrollTop();
 
-    // $('.jumbotronparalax').css({
-    //     'transform' : 'translate(0px, '+ wScroll/4+'%)'
-    // });
-
-    // $('.jumbotronparalax .button').css({
-    //     'transform' : 'translate(0px, '+ wScroll/6+'%)'
-    // });
-
-    // About
     if(wScroll > $('.profil-area').offset().top -220 ) {
         $('.pertama').addClass('pMuncul');
         $('.kedua').addClass('pMuncul');
         $('img').addClass('imgmuncul');
-    
+    }
+    if(wScroll > $('.work-experience').offset().top -50) {
+        $('.work-experience .single-brand').each(function(i) {
+            setTimeout(function() {
+                $('.work-experience .single-brand').eq(i).addClass('workMuncul');
+            }, 400 * (i+1));
+        });
+        $('.work-experience .pengalaman-area').addClass('pengalamanMuncul');
+    }
+
+    if(wScroll > $('.portfolio-area').offset().top -10 ) {
+        $('.photos').addClass('fotoMuncul');
     }
 });
+
+// $(window).scroll(function(){
+
+//     var wScroll = $(this).scrollTop();
+    
+// });
+
 
 // paralax work
 $(window).scroll(function(){
@@ -141,6 +149,7 @@ $(window).on('load', function(){
     // $('.kedua').addClass('pMuncul');
 
     $('.jumbotronparalax').addClass('jumbomuncul');
+    $('.jumbotron').addClass('jMuncul');
    
     
 

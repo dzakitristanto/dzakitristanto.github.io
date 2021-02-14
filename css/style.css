@@ -65,7 +65,7 @@ html{
     height: 30px;
     width: 30px;
     background: var(--primary-color);
-    right: 30px;
+    right: 50px;
     bottom: 10px;
     text-align: center;
     line-height: 30px;
@@ -138,12 +138,21 @@ html{
     background-image: url(/img/banner.jpg);
     height: 100vh;
     /* overflow: hidden; */
+    opacity: 0;
+    transform: translate(0,-50px);
+    transition: 3s;
+    
+}
+
+.jumbotron.jMuncul{
+    opacity: 1;
+    transform: translate(0,0);
 }
 
 .jumbotronparalax{
     opacity: 0;
     transform: translate(0,100px);
-    transition: 2s;
+    transition: 3s;
 }
 
 .jumbotronparalax.jumbomuncul{
@@ -217,14 +226,14 @@ html{
     padding-top: 4rem;
     opacity: 0;
     transform: translate(-100px, 0);
-    transition: 2s;
+    transition: 3s;
     /* background-color: red; */
 }
 
 .profil-area .kedua{
     opacity: 0;
     transform: translate(100px, 0);
-    transition: 2s;
+    transition: 3s;
 }
 
 .pertama.pMuncul, .kedua.pMuncul{
@@ -238,7 +247,7 @@ html{
     margin-right: auto;
     opacity: 0;
     transform: translate(0,-100px);
-    transition: 2s;
+    transition: 3s;
 }
 
 .profil-area img.imgmuncul{
@@ -294,10 +303,10 @@ html{
      justify-content: center;
 }
 
-/* .single-brand{
+.single-brand{
     opacity: 0;
-    transform: translate(0,100px);
-    transition: 2s;
+    transform: translate(0,300px);
+    transition: 3s;
 }
 
 .single-brand.workMuncul{
@@ -308,13 +317,13 @@ html{
 .work-experience .pengalaman-area{
     opacity: 0;
     transform: translate(100px,0);
-    transition: 2s;
+    transition: 3s;
 }
 
 .work-experience .pengalaman-area.pengalamanMuncul{
     opacity: 1;
     transform: translate(0,0);
-} */
+} 
 
 .fast-row .col-lg-4 > .single-brand{
     border: 1px solid var(--border-color);
@@ -448,8 +457,16 @@ html{
     margin-bottom: 0
 }
 
-.lightbox-gallery .photos {
-    padding-bottom: 20px
+.photos {
+    padding-bottom: 20px;
+    transform: translate(0,100px);
+    transition: 3s;
+    opacity: 0;
+}
+
+.photos.fotoMuncul{
+    opacity: 1;
+    transform: translate(0,0);
 }
 
 .lightbox-gallery .item {
@@ -485,8 +502,10 @@ html{
     height: 1px;
     color: rgb(156, 156, 156);
 }
-.contact-area .container{
+.cover-contact{
     box-shadow: var(--box-shadow);
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 20px;
     background-color:var(--background-color);
     padding-top: 30px;
@@ -583,6 +602,7 @@ footer h6{
         color: white !important;
         margin-bottom: 10px;
     }
+    
 
     .navbar-nav a:hover{
         
@@ -594,6 +614,9 @@ footer h6{
         background-color: white ;
     }
   
+    .banner-area h1{
+        font-size: 35px;
+    }
     .MobileMenu{
         position: fixed;
         width: 70%;
@@ -646,7 +669,7 @@ footer h6{
     .bgcolor.scrolled{
         background-color:white!important;
         box-shadow: var(--box-shadow);
-        transition: ease-in-out 0.3s;
+        transition: ease-in-out 0.5s;
     }
 
     .navbar-nav a{
@@ -714,9 +737,8 @@ footer h6{
     }
 
     .work-experience .pengalaman-area .tahun-area .tahun{
+        font-size: 60px !important;
         color: var(--primary-color);
-        margin-top: 12px;
-        font-size: 80px;
         border: 3px dashed var(--primary-color);
         border-width: 2px;
     }
@@ -807,9 +829,6 @@ footer h6{
 
 
 
-.title-text{
-    font: normal bold var(--roboto);
-}
 
 /* button */
 
@@ -837,13 +856,13 @@ footer h6{
 }
 
 .button.primary-button::after, .button.secondary-button::after{
-    position: absolute;
-    top: -2px; left: -2px;
+    /* position: relative; */
+    /* top: -2px; left: -2px;
     bottom: -2px; right: -2px;
     background: var(--gradient-color);
     content: '';
     z-index: -1;
-    border-radius:4px;
+    border-radius:4px; */
 }
 
 .button.secondary-button{
