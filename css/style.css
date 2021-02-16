@@ -21,6 +21,7 @@ html, body{
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+    font-family: var(--roboto);
 }
 
 /* css variable */
@@ -44,9 +45,7 @@ html, body{
     --knewave:'Knewave', Roboto, veranda;
 }
 
-html, body{
-    font-family: var(--roboto);
-}
+
 
 html{
     scroll-behavior: smooth;
@@ -117,9 +116,7 @@ html{
 .navbar-nav .nav-item:hover .nav-link{
     color: var(--primary-color);
 }
-/* .navbar-nav .active a{
-    color: var(--primary-color) !important;
-} */
+
 
 .navbar-nav a:hover{
     /* color: var(--primary-color) !important; */
@@ -137,6 +134,7 @@ html{
     background-repeat: no-repeat;
     background-image: url(/img/banner.jpg);
     height: 100vh;
+    width: 100%;
     /* overflow: hidden; */
     opacity: 0;
     transform: translate(0,-50px);
@@ -592,7 +590,7 @@ footer h6{
 @media (max-width:992px){
 
     .navbar{
-        background-color: rgb(107, 162, 235);
+        background-color: var(--primary-color);
     }
     .navbar .navbar-brand, .navbar-brand span{
         color: white !important;
@@ -623,7 +621,7 @@ footer h6{
         top: 0;
         bottom: 0;
         margin: auto;
-        background-color: rgb(107, 162, 235) ;
+        background-color: var(--primary-color) ;
         left: 0;
         margin-top: 4rem;
         transform: translateX(-100%);
